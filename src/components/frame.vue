@@ -1,8 +1,7 @@
 <template>
-  <div id="app">
+  <div id="frame">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <HelloWorld :embed="id" />
-    {{ title }}
   </div>
 </template>
 
@@ -10,13 +9,10 @@
 import HelloWorld from './components/HelloWorld.vue'
 
 export default {
-  name: 'app',
-  props: {
-    title: String
-  },
-  components: {
-    HelloWorld
-  },
+    name: 'frame',
+    components: {
+        HelloWorld
+    },
   data() {
     return {
       id: 'rpWrtXyEAN0',
@@ -40,11 +36,7 @@ export default {
     }
   },
   mounted() {
-    // this.id = this.getUrlParam('i','rpWrtXyEAN0');
-    this.id = this.title;
+    this.id = this.getUrlParam('i','rpWrtXyEAN0');
   },
 }
 </script>
-
-<style>
-</style>

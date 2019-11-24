@@ -1,17 +1,34 @@
 <template><div>
   <b-button v-b-modal.modal-1>Launch demo modal</b-button>
+  <b-modal id="modal-1" title="BootstrapVue" centered hide-footer hide-header size="lg">
+    <template v-slot:modal-header>
+      -
+    </template>
+    <b-embed
+    type="iframe"
+    aspect="16by9"
+    :src="'https://www.youtube.com/embed/' + embed"
+    allowfullscreen
+  ></b-embed>
 
-  <b-modal id="modal-1" title="BootstrapVue">
-    <p class="my-4">Hello from modal!</p>
+   <template v-slot:modal-footer>
+     -
+    </template>
   </b-modal>
 </div>
 </template>
 
 <script>
+
 export default {
   name: 'HelloWorld',
   props: {
-    msg: String
+    embed: String
+  },
+  data() {
+    return {
+      id: null,
+    }
   },
   methods: {
   }

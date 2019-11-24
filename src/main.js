@@ -11,6 +11,7 @@ Vue.config.productionTip = false
 
 import vueCustomElement from 'vue-custom-element'
 Vue.use(vueCustomElement)
+
 /*
 new Vue({
   store,
